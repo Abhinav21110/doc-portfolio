@@ -19,7 +19,6 @@ const About = () => {
   useEffect(() => {
     anime({
       targets: titleRef.current,
-      translateY: isTitleVisible ? [60, 0] : [0, 60],
       opacity: isTitleVisible ? [0, 1] : [1, 0],
       duration: 1000,
       easing: 'easeOutCubic',
@@ -29,7 +28,6 @@ const About = () => {
   useEffect(() => {
     anime({
       targets: quoteRef.current,
-      translateX: isQuoteVisible ? [-50, 0] : [0, -50],
       opacity: isQuoteVisible ? [0, 1] : [1, 0],
       duration: 800,
       easing: 'easeOutCubic',
@@ -39,7 +37,6 @@ const About = () => {
   useEffect(() => {
     anime({
       targets: contentRef.current?.children,
-      translateY: isContentVisible ? [40, 0] : [0, 40],
       opacity: isContentVisible ? [0, 1] : [1, 0],
       duration: 600,
       delay: anime.stagger(200),

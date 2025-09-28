@@ -23,6 +23,9 @@ export const use3DTilt = (options: Tilt3DOptions = {}) => {
     const element = ref.current;
     if (!element) return;
 
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+    if (!mediaQuery.matches) return;
+
     let requestId: number;
 
     const handleMouseMove = (e: MouseEvent) => {
